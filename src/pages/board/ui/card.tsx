@@ -3,17 +3,20 @@ import { Button } from 'react-aria-components'
 
 import { HeartOutline } from '@app/shared/icons'
 
+import styles from './card.module.css'
+
 export const Card: FC = () => {
   return (
-    <div className="px-5 py-4 flex flex-col gap-4 bg-white rounded-4xl corner-squircle">
-      <div>
+    <div className={styles.root}>
+      <div className={styles.text}>
         Отличная координация между командами, задачи закрывались быстро и без задержек, очень
         довольны результатом!
       </div>
 
-      <div className="flex justify-between">
-        <div>SwiftAnchor</div>
-        <Button className="cursor-pointer">
+      <div className={styles.footer}>
+        <div className={styles.author}>SwiftAnchor</div>
+        <Button>
+          <span />
           <HeartOutline />
         </Button>
       </div>

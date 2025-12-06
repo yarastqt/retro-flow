@@ -1,6 +1,9 @@
 import type { FC, ReactNode } from 'react'
+import { Button } from 'react-aria-components'
 
 import { createSlot, useSlots } from '@app/shared/lib/react-slots'
+
+import styles from './column.module.css'
 
 export interface ColumnProps {
   children: ReactNode
@@ -16,9 +19,12 @@ const Column: FC<ColumnProps> = (props) => {
   const cards = slots.get(CardsSlot)
 
   return (
-    <div className="w-[336px]">
-      <div>{title?.rendered}</div>
-      <div>{cards?.rendered}</div>
+    <div className={styles.root}>
+      <div className={styles.title}>{title?.rendered}</div>
+      <div className={styles.cards}>
+        {cards?.rendered}
+        <Button className={styles.add}>Add card</Button>
+      </div>
     </div>
   )
 }

@@ -5,9 +5,11 @@ import { Card } from './ui/card'
 import { Column } from './ui/column'
 import { Header } from './ui/header'
 
+import styles from './board-page.module.css'
+
 export const BoardPage: FC = () => {
   return (
-    <div className="p-3 flex flex-col gap-4 h-screen">
+    <div className={styles.root}>
       <Header />
 
       <Canvas>

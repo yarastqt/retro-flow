@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 336px;
+}
+
+.title {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add {
+  height: 44px;
+  border-radius: 32px;
+  corner-shape: squircle;
+  border: 0;
+  cursor: pointer;
+  background-color: #f4f4f5;
+  color: #71717a;
+  outline: 0;
+    font-size: 14px;
+    font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
