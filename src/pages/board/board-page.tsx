@@ -12,7 +12,12 @@ export const BoardPage: FC = () => {
 
       <Canvas>
         <Column>
-          <Card />
+          <Column.Title>What went well</Column.Title>
+          <Column.Cards>
+            <Card />
+            <Card />
+            <Card />
+          </Column.Cards>
         </Column>
       </Canvas>
     </div>
