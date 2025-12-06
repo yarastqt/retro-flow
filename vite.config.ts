@@ -6,5 +6,12 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
-  plugins: [react(), tsconfigPath()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
+    tsconfigPath(),
+  ],
 })
