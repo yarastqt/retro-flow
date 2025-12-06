@@ -1,7 +1,10 @@
 import type { FC, ReactNode } from 'react'
 import { Button } from 'react-aria-components'
+import { useUnit } from 'effector-react'
 
 import { createSlot, useSlots } from '@app/shared/lib/react-slots'
+
+import { BoardModel } from '../model/board-model'
 
 import styles from './column.module.css'
 
@@ -13,6 +16,10 @@ const TitleSlot = createSlot()
 const CardsSlot = createSlot()
 
 const Column: FC<ColumnProps> = (props) => {
+  const { onAddNewCardPress } = useUnit({
+    onAddNewCardPress: BoardModel.addTriggered,
+  })
+
   const slots = useSlots(props)
 
   const title = slots.get(TitleSlot)
@@ -23,7 +30,9 @@ const Column: FC<ColumnProps> = (props) => {
       <div className={styles.title}>{title?.rendered}</div>
       <div className={styles.cards}>
         {cards?.rendered}
-        <Button className={styles.add}>Add card</Button>
+        <Button className={styles.add} onPress={onAddNewCardPress}>
+          Add card
+        </Button>
       </div>
     </div>
   )
