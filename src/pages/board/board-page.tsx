@@ -7,7 +7,7 @@ import { Header } from './ui/header'
 
 export const BoardPage: FC = () => {
   return (
-    <div>
+    <div className="p-3 flex flex-col gap-4 h-screen">
       <Header />
 
       <Canvas>
