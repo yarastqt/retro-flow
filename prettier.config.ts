@@ -4,7 +4,7 @@ const QS = '([?].*)?'
 const STYLE_EXT = 'css|less|sass|scss|styl|stylus|pcss|postcss|sss'
 const IMAGE_EXT = 'apng|bmp|png|jpe?g|jfif|pjpeg|pjp|gif|svg|ico|webp|avif|cur|jxl'
 const NOT_STYLE_OR_ASSET = `(.(?![.](?:${STYLE_EXT}|${IMAGE_EXT})${QS}$))*`
-const ALIASES = ['vendors', 'shared', 'client', 'server']
+const ALIASES = ['app']
 
 const SCOPED_RE = `^@(?!${ALIASES.join('|')}).`
 const ALIASES_RE = ALIASES.map((alias) => `^@${alias}/`)
