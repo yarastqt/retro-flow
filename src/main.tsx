@@ -9,6 +9,7 @@ import BoardPage from '@app/pages/board'
 import { AppGateModel } from '@app/shared/app-gate'
 
 import '@app/shared/firebase'
+import '@app/shared/session'
 
 async function boostrap() {
   const root = createRoot(document.getElementById('root')!)
